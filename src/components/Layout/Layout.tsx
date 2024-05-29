@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { animated, useSpring } from '@react-spring/web';
 
 import NavigationBar from '../Navbar/NavigationBar';
@@ -32,6 +32,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const headerSpring = useSpring({
     transform: isHeaderVisible ? 'translateY(0%)' : 'translateY(-100%)',
   });
+
+  useEffect(() => {
+    if (isMobileNavOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+  }, [isMobileNavOpen]);
 
   return (
     <section className={`flex flex-col relative h-full min-h-screen`}>

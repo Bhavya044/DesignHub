@@ -29,7 +29,7 @@ const Footer: React.FC<IFooterProps> = ({ showAnimation = true }) => {
         <div className="space-y-7 ">
           <div className="-m-3 rounded-lg overflow-hidden bg-white shadow-md">
             <animated.div style={logoAnimation}>
-              <div className="flex items-center p-4">
+              <div className="flex sm:flex-row flex-col sm:items-center p-4">
                 <img
                   src={`/assets/logo/logo_bg.png`}
                   className="h-24 rounded-full"
