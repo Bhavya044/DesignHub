@@ -1,7 +1,7 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import { navLinks } from "./nav.config";
-import IconWrapper from "../Wrapper/IconWrapper";
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { navLinks } from './nav.config';
+import IconWrapper from '../Wrapper/IconWrapper';
 
 interface INavigationBarProps {
   isMobileNavOpen?: boolean;
@@ -16,30 +16,33 @@ const NavigationBar: React.FC<INavigationBarProps> = ({
 
   return (
     <nav
-      className={`flex w-full px-3 gap-12 ${
+      className={`flex w-full px-2 py-1 gap-12 ${
         isMobileNavOpen
-          ? "flex-col mt-6"
-          : "flex-row backdrop-filter py-1 px-2 mt-4 backdrop-blur-lg bg-black rounded-sm opacity-75"
+          ? 'flex-col mt-6 gap-4'
+          : 'flex-row  backdrop-filter py-1 px-2 -mt-1 backdrop-blur-lg bg-black rounded-md opacity-55'
       } tracking-wider text-lg font-light  justify-evenly items-center `}
     >
       {navLinks?.map((link, index) => (
         <Link
           key={index}
-          style={{ fontFamily: "junicode-regular" }}
           to={link?.to}
           onClick={() => onNavClick?.()}
-          className={`${
+          className={` cursor-none ${
             isMobileNavOpen
-              ? "block w-full font-semibold text-white hover:shadow-lg text-center py-3"
-              : "hover:font-semibold hover:underline text-white"
-          } relative ${
-            location.pathname === link?.to ? "bg-gray-500 px-3 rounded-md" : "" // Add the active tab background color here
-          }`}
+              ? 'block w-full font-semibold text-black hover:shadow-lg text-center py-3'
+              : 'w-max  relative group  text-white'
+          } `}
         >
-          <span className="relative">
+          <span
+            style={{ fontFamily: 'junicode-regular' }}
+            className="relative w-full"
+          >
             {link?.text}
-            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-white transform origin-bottom scale-x-0 transition-transform group-hover:scale-x-100"></span>
           </span>
+
+          <span
+            className={`absolute bg-white bottom-0 left-0 w-0 h-[1.5px] transition-all duration-300  ${location.pathname === link?.to ? 'w-full' : 'group-hover:w-full'} `}
+          ></span>
         </Link>
       ))}
       {isMobileNavOpen ? (

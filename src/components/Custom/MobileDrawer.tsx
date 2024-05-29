@@ -1,6 +1,6 @@
 // MobileDrawer.tsx
-import React, { ReactNode, useRef } from "react";
-import { animated, useSpring } from "@react-spring/web";
+import React, { ReactNode, useRef } from 'react';
+import { animated, useSpring } from '@react-spring/web';
 
 interface MobileDrawerProps {
   children?: ReactNode;
@@ -21,9 +21,9 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ children }) => {
   return (
     <animated.div
       ref={drawerRef}
-      className={"backdrop-blur-sm fixed bg-transparent w-full h-full z-50"}
+      className={'backdrop-blur-md fixed bg-transparent w-full h-full z-50'}
       style={{
-        top: 86,
+        top: 79,
         left: 0,
         ...springs,
       }}
