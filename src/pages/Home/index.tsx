@@ -6,7 +6,7 @@ import './components/home.css';
 
 const HomePage = () => {
   return (
-    <div className=" h-full">
+    <div className=" h-full space-y-7">
       <LandingScreen />
       <Screen2 />
       <Screen3 />

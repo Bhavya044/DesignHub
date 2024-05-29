@@ -48,7 +48,7 @@ const LandingScreen = () => {
           loop
           muted
           playsInline
-          src="/assets/projects/home-1.mp4"
+          src="/assets/projects/home-2.mp4"
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-gray-900 flex flex-col items-center justify-center">
           <div className="sm:text-4xl flex flex-col justify-center items-center text-2xl text-center">
@@ -69,7 +69,7 @@ const LandingScreen = () => {
             </animated.span>
           </div>
           <div className="mt-4">
-            <CTAButton buttonText="Get Inspired" />
+            <CTAButton btnColor="#3C241C" buttonText="Get Inspired" />
           </div>
         </div>
       </div>
