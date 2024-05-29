@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'custom-cursive-font';
+  src: url('../../public/fonts/KaushanScript-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'junicode-italic';
+  src: url('../../public/fonts/Junicode-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'junicode-bold';
+  src: url('../../public/fonts/Junicode-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'junicode-regular';
+  src: url('../../public/fonts/Junicode.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'generic';
+  src: url('../../public/fonts/Quicksand-Regular.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'outline';
+  src: url('../../public/fonts/outline.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
