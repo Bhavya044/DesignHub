@@ -24,38 +24,41 @@ const Footer: React.FC<IFooterProps> = ({ showAnimation = true }) => {
   });
 
   return (
-    <footer className="flex flex-col gap-5 relative bg-gradient-to-r from-black via-gray-800 to-gray-700 text-white p-10 h-max">
+    <footer className="flex flex-col gap-5 relative border-t text-white p-10 h-max">
       <animated.div style={firstDivAnimation}>
         <div className="space-y-7 ">
-          <div className="-ml-6 -mt-6 rounded shadow-sm">
+          <div className="-m-3 rounded-lg overflow-hidden bg-white shadow-md">
             <animated.div style={logoAnimation}>
-              <div className="flex items-center">
+              <div className="flex items-center p-4">
                 <img
-                  src={`/assets/logo/logo-gold.png`}
-                  className="h-24"
+                  src={`/assets/logo/logo_bg.png`}
+                  className="h-24 rounded-full"
                   alt="Logo"
                 />
-                <span
-                  style={{ color: '#7d6615' }}
-                  className="text-2xl text-yellow-700 flex flex-col mt-5 font-bold ml-4"
-                >
-                  BNB INDIA
-                  <span className="text-sm text-white font-normal">
-                    Infusing Life into Spaces, One Elegant Piece at a Time.
-                  </span>
-                </span>
+                <div className="ml-4">
+                  <h2 className="text-2xl font-bold text-yellow-700">
+                    Dreamspace Designs
+                  </h2>
+                  <p className="text-sm text-gray-500">
+                    Crafting Inspirational Spaces, One Elegant Piece at a Time.
+                  </p>
+                </div>
               </div>
             </animated.div>
 
-            <p className="mt-4 ml-6 text-sm break-all text-gray-500 whitespace-pre-line">
-              B&B India, est. 2016: Leading the way in exquisite furniture. Our
-              Dining Tables to Designer Sofas showcase innovative design and
-              top-notch craftsmanship. Elevate your spaces with B&B India, where
-              each piece tells a story of elegance, comfort, and enduring
-              quality.
+            <p
+              style={{ fontFamily: 'junicode-regular' }}
+              className="p-4 text-sm text-gray-500 whitespace-pre-line"
+            >
+              Dreamspace Design Hub, est. 20xx: Leading the way in crafting
+              inspirational spaces. Our Dining Tables to Designer Sofas showcase
+              innovative design and top-notch craftsmanship. Elevate your spaces
+              with Dreamspace Designs, where each piece tells a story of
+              elegance, comfort, and enduring quality.
             </p>
           </div>
-          <div className="sm:grid sm:grid-cols-3 space-y-4 sm:space-y-0 w-full">
+
+          <div className="sm:grid sm:grid-cols-3 gap-3 space-y-4 sm:space-y-0 w-full">
             {footerConfig?.map((config) => (
               <RedirectList header={config?.header} content={config?.links} />
             ))}
@@ -63,7 +66,7 @@ const Footer: React.FC<IFooterProps> = ({ showAnimation = true }) => {
         </div>
       </animated.div>
 
-      <div className="flex justify-center  border p-2 gap-6 border-gray-600 rounded-md ">
+      <div className="flex justify-center  border p-2 gap-6 border-gray-300 rounded-md ">
         <SocialMediaIcons fromFooter />
         {/* <SubscribeNewsletter/> */}
       </div>

@@ -2,7 +2,6 @@ import React, { ReactNode, useState } from 'react';
 import { animated, useSpring } from '@react-spring/web';
 
 import NavigationBar from '../Navbar/NavigationBar';
-import NavigationContactInfo from '../Navbar/NavigationContactInfo';
 import WhatsappRedirect from '../Custom/WhatsappRedirect';
 import useIsMobile from '../hooks/useIsMobile';
 import MobileDrawer from '../Custom/MobileDrawer';
@@ -10,7 +9,6 @@ import IconWrapper from '../Wrapper/IconWrapper';
 import Footer from '../Footer';
 import useScrollVisibility from '../hooks/useScrollVisibility';
 import CustomCursor from '../Custom/Cursor';
-import CursorComponent from '../Custom/Cursor';
 
 interface LayoutProps {
   children: ReactNode;
@@ -58,13 +56,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               >
                 {' '}
                 <img
-                  src="/assets/logo/logo-gold.png"
+                  src="/assets/logo/logo_transparent.png"
                   alt="logo-bnb-india"
-                  className="sm:w-36 sm:h-16 w-36 h-16 object-fill"
+                  className="sm:w-[40%] sm:h-[40%] w-36 h-16 object-fill"
                 />
-                <span className=" sm:mt-8 font-medium tracking-widest  text-pretty">
-                  B&B India{' '}
-                </span>
               </div>
               <div className="sm:mt-4">
                 <NavigationBar />
