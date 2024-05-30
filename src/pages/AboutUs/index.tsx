@@ -28,7 +28,10 @@ const AboutUs = () => {
   const slideInAnimation = useSpring({
     // opacity: isVisible ? 1 : 0,
 
-    to: { opacity: isVisible? 1 : 0, transform: isVisible?"translateX(0%)":"translateX(2%)"}, 
+    to: {
+      opacity: isVisible ? 1 : 0,
+      transform: isVisible ? 'translateX(0%)' : 'translateX(2%)',
+    },
   });
 
   return (
@@ -47,9 +50,15 @@ const AboutUs = () => {
           <div className="flex flex-col">
             <div
               style={{ fontFamily: 'custom-cursive-font' }}
-              className="sm:text-5xl text-2xl  font-semibold text-white"
+              className="sm:text-5xl text-2xl flex gap-8  w-max font-semibold text-white"
             >
-              About <span style={{ fontFamily: 'junicode-bold' }}>BnB </span>
+              About{' '}
+              <span
+                className="w-full mt-3"
+                style={{ fontFamily: 'junicode-bold' }}
+              >
+                Dream Space{' '}
+              </span>
             </div>
             <div className="w-36 h-0.5 bg-white sm:ml-40 rounded-sm mt-3" />{' '}
           </div>
@@ -62,28 +71,27 @@ const AboutUs = () => {
         </div>
       </div>
       <div className=" h-max p-4 gap-6 grid sm:grid-cols-2">
-          <ImageOverlayComponent
-            backgroundImage="/assets/projects/home-interior-orange.png"
-            listData={[
-              { value: '80', label: 'Projects Done' },
-              { value: '30', label: 'Happy Clients' },
-              { value: '600', label: 'Working Hours' },
-              { value: '1', label: 'Awards' },
-            ]}
-          />
-        <animated.div style={slideInAnimation}  className="flex flex-col gap-4">
-        <span className='text-xs -mb-2 text-gray-500'>  NUMBERS</span>
-        <div className="w-32 h-0.5 bg-black rounded-sm -mb-2" />{' '}
+        <ImageOverlayComponent
+          backgroundImage="/assets/projects/home-interior-orange.png"
+          listData={[
+            { value: '80', label: 'Projects Done' },
+            { value: '30', label: 'Happy Clients' },
+            { value: '600', label: 'Working Hours' },
+            { value: '1', label: 'Awards' },
+          ]}
+        />
+        <animated.div style={slideInAnimation} className="flex flex-col gap-4">
+          <span className="text-xs -mb-2 text-gray-500"> NUMBERS</span>
+          <div className="w-32 h-0.5 bg-black rounded-sm -mb-2" />{' '}
           <div
             style={{ fontFamily: 'junicode-italic' }}
-            className="text-4xl font-bold"
+            className="text-4xl  font-bold "
           >
-            Make with love,
-            <span className="ml-1">all what we do.</span>
+            Make with love, all what we do.
           </div>
           <div style={{ fontFamily: 'junicode-regular' }} className="text-md">
-            Established in 2016, B&B India is a distinguished name in interior
-            design, known for manufacturing and wholesaling exquisite
+            Established in 20xx, Dream Space India is a distinguished name in
+            interior design, known for manufacturing and wholesaling exquisite
             furnishings. Committed to exceeding client specifications, we adhere
             to stringent quality standards.
             <br />
@@ -98,9 +106,9 @@ const AboutUs = () => {
           </div>{' '}
         </animated.div>
       </div>
-       <ChooseUs/>
-       <ProjectView/>
-       <Testimonials/>
+      <ChooseUs />
+      <ProjectView />
+      <Testimonials />
     </div>
   );
 };

@@ -1,11 +1,11 @@
-import React, { CSSProperties, ReactNode } from "react";
+import React, { CSSProperties, ReactNode } from 'react';
 
 interface IconWrapperProps {
   iconPath?: string;
   width?: string | number;
   height?: string | number;
   children?: ReactNode;
-  onClick?:()=>void
+  onClick?: () => void;
 }
 
 const IconWrapper: React.FC<IconWrapperProps> = ({
@@ -13,7 +13,7 @@ const IconWrapper: React.FC<IconWrapperProps> = ({
   width,
   height,
   children,
-  onClick
+  onClick,
 }) => {
   const iconStyle: CSSProperties = {
     width: width ?? 30,
@@ -21,7 +21,11 @@ const IconWrapper: React.FC<IconWrapperProps> = ({
   };
 
   return (
-    <div onClick={onClick} className="hover:-translate-y-0.5 " style={iconStyle}>
+    <div
+      onClick={onClick}
+      className="hover:-translate-y-0.5 text-black "
+      style={iconStyle}
+    >
       {iconPath ? <img src={iconPath} alt="icon" /> : children}
     </div>
   );
